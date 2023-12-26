@@ -1,11 +1,14 @@
 {
 "folders": [
-{
-"path": ".."
-},
-{
-"path": "../baocao"
-}
+	{
+		"path": ".."
+	},
+	{
+		"path": "../baocao"
+	},
+	{
+		"path": "others/push/modules/__pycache__"
+	}
 ],
 "settings": {
 "code-runner.executorMap": {
