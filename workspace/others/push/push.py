@@ -23,8 +23,10 @@ start_path = glob.glob(os.path.join(
 [MyFormat.space(i) for i in gitignore_path]
 [MyFormat.space(i) for i in start_path]
 
-# contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
-# main =  os.path.join(os.getcwd(), '../../../baocao/main.tex') 
+contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
+print("🐍 File: push/push.py | Line: 27 | undefined ~ contents",contents)
+main =  os.path.join(os.getcwd(), '../../../baocao/main.tex') 
+print("🐍 File: push/push.py | Line: 29 | undefined ~ main",main)
 
 
 # MyFormat.latex(contents)
@@ -32,6 +34,6 @@ start_path = glob.glob(os.path.join(
 
 MyView.CloseTab()
 MyView.Target(2)
-MyView.CloseTerminal()
+# MyView.CloseTerminal()
 MyView.CloseScrollBar()
 # MyView.OpenLatex()
