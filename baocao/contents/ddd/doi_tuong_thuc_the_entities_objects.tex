@@ -1,0 +1,312 @@
+% \subsection{Đối tượng thực thể (Entities Objects)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Định nghĩa:
+% <!-- Một thực thể đại diện cho một đối tượng kinh doanh có thể nhận dạng duy nhất, bao gồm các thuộc tính và hành vi miền được xác định rõ ràng. -->
+\begin{example}
+    
+\end{example}
+% mối quan hệ giữa logic nghiệp vụ và các đối tượng thực thể.
+
+
+% <!-- Một thực thể được xác định duy nhất trong một bối cảnh giới hạn. -->
+
+
+
+% Các thực thể này và danh tính của chúng chỉ có ý nghĩa trong bối cảnh giới hạn tương ứng của chúng. Một thực thể có một tập hợp các thuộc tính được xác định bởi ngôn ngữ chung cho ngữ cảnh giới hạn .
+ 
+
+% Một thực thể có một hành vi, nghĩa là nó đóng gói logic nghiệp vụ. Và logic kinh doanh này được thể hiện qua cách thức hoạt động.
+ 
+
+% Khi các hoạt động này được thực hiện đối với thực thể, nó sẽ dẫn đến sự thay đổi trạng thái của thực thể.  
+
+Khi một số thao tác này được thực thi, chúng sẽ thay đổi trạng thái của tài khoản. Ví dụ: số dư có thể tăng hoặc giảm do thực hiện một số thao tác này.
+
+13
+
+00: 02: 23, 100--> 00: 02: 29, 160
+
+Hãy xác định logic kinh doanh là gì, không phải kinh doanh. Logic đôi khi được gọi là logic miền.
+
+14
+
+00: 02: 29, 160--> 00: 02: 38, 680
+
+Logic nghiệp vụ có thể bao gồm các quy tắc nghiệp vụ. Ví dụ: việc rút tiền sẽ không thành công nếu số dư nhỏ hơn số tiền rút.
+
+15
+
+00: 02: 38, 850--> 00: 02: 55, 860
+
+Nó có thể là sự xác nhận. Ví dụ: số tiền rút không được nhỏ hơn hoặc bằng 0. Nó có thể là các phép tính, ví dụ, tính chéo thành phần cho tài khoản séc và nó có thể là các hoạt động có thể thay đổi trạng thái của thực thể.
+
+16
+
+00: 02: 55, 860--> 00: 03: 05, 880
+
+Ví dụ: logic giao dịch rút tiền có thể được kết hợp để thực hiện tất cả những điều này được gọi là logic nghiệp vụ nói chung.
+
+17
+
+00: 03: 06, 330--> 00: 03: 15, 600
+
+Hãy xem một ví dụ về logic nghiệp vụ hoặc hành vi. Trong trường hợp tài khoản séc, có thể có hoạt động rút tiền từ tài khoản.
+
+18
+
+00: 03: 15, 900--> 00: 03: 28, 320
+
+Hoạt động rút tiền này có thể lấy số tiền rút làm đối số. Việc kiểm tra đầu tiên sẽ được thực hiện khi thực hiện thao tác rút tiền là kiểm tra số dư khả dụng.
+
+19
+
+00: 03: 28, 320--> 00: 03: 39, 840
+
+Nếu số dư khả dụng nhỏ hơn số tiền rút thì giao dịch sẽ bị từ chối. Nếu không, giao dịch sẽ được chấp nhận và số dư sẽ bị giảm đi theo số tiền rút.
+
+20
+
+00: 03: 40, 140--> 00: 03: 49, 020
+
+Đã đến lúc làm một bài kiểm tra nhanh. Hãy nhìn vào thực thể tài khoản kiểm tra này. Chúng ta có nghĩ rằng thực thể này bộc lộ một số logic kinh doanh không?
+
+21
+
+00: 03: 50, 700--> 00: 03: 58, 350
+
+Câu trả lời là không, không phải vậy, và lý do tôi nói vậy là vì những thao tác này chỉ là getters và setters.
+
+22
+
+00: 03: 58, 350--> 00: 04: 08, 820
+
+Tương tự, thao tác này là sở hữu đối tượng vào CSDL . Vì vậy, nhìn từ bề ngoài, có vẻ như thực thể này không bao gồm bất kỳ hoạt động kinh doanh nào.
+
+23
+
+00: 04: 08, 820--> 00: 04: 21, 180
+
+Các thực thể logic chỉ có ý nghĩa trong bối cảnh ranh giới mà chúng được xác định. Người ta thường thấy các tên thực thể giống nhau xuất hiện trên nhiều ngữ cảnh được liên kết.
+
+24
+
+00: 04: 21, 630--> 00: 04: 29, 200
+
+Nhưng chúng ta phải nhớ rằng định nghĩa của thực thể trong bối cảnh giới hạn này không được đảm bảo giữ nguyên.
+
+25
+
+00: 04: 29, 310--> 00: 04: 39, 300
+
+Ví dụ: thực thể khách hàng trong tài khoản bán lẻ có thể trông không giống với thực thể khách hàng trong bối cảnh giới hạn thẻ tín dụng.
+
+26
+
+00: 04: 39, 660--> 00: 04: 53, 780
+
+Hãy nhớ rằng các thực thể được xác định duy nhất trong một ngữ cảnh giới hạn, nhưng đôi khi có thể xảy ra trường hợp cùng một thuộc tính được sử dụng để xác định duy nhất thực thể trong các liên hệ công việc.
+
+27
+
+00: 04: 53, 790--> 00: 05: 05, 620
+
+Nhưng đó hoàn toàn là sự trùng hợp ngẫu nhiên. Vì vậy, trong ví dụ này, số An sinh xã hội của khách hàng đang được sử dụng để nhận dạng duy nhất khách hàng trong cả hai địa chỉ liên hệ công việc này.
+
+28
+
+00: 05: 06, 180--> 00: 05: 26, 420
+
+Hãy nhớ rằng, đó thực sự là sự trùng hợp ngẫu nhiên. Việc xác định các thực thể này của nhóm sẽ hoạt động độc lập với nhau và xác định các thuộc tính cũng như hoạt động cho các thực thể dựa trên yêu cầu trong từng bối cảnh nghiệp vụ, các thực thể được lưu trữ lâu dài.
+
+29
+
+00: 05: 26, 700--> 00: 05: 40, 000
+
+Dữ liệu được lưu trữ dài hạn thể hiện trạng thái hiện tại của thực thể. Điều này phổ biến đối với RDBMS và không có CSDL đơn lẻ nào được sử dụng để lưu trữ liên tục các thực thể.
+
+30
+
+00: 05: 40, 620--> 00: 05: 56, 450
+
+Trong trường hợp RDBMS, một bảng biểu thị một tập hợp các thực thể. Các quy tắc trong bảng biểu thị các thực thể được xác định duy nhất bằng cột khóa chính.
+
+31
+
+00: 05: 56, 700--> 00: 06: 06, 740
+
+Các cột còn lại có các giá trị cho thuộc tính của từng thực thể. Đã đến lúc xem lại nhanh những điểm chính của bài giảng này.
+
+32
+
+00: 06: 06, 840--> 00: 06: 14, 640
+
+Điều đầu tiên là các thực thể là các đối tượng kinh doanh chỉ có ý nghĩa trong một bối cảnh giới hạn.
+
+33
+
+00: 06: 14, 640--> 00: 06: 26, 760
+
+Nơi chúng được xác định là các thực thể được xác định duy nhất trong bối cảnh giới hạn . Tiếp theo là định nghĩa của thực thể bao gồm thuộc tính và hành vi.
+
+34
+
+00: 06: 27, 060--> 00: 06: 35, 700
+
+Hành vi này triển khai logic nghiệp vụ có thể thay đổi trạng thái của thực thể. Các thực thể được lưu trữ lâu dài.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Đối tượng thực thể (Entities Objects)  là đối tượng miền có có định danh riêng  duy nhất.  Định danh này được giữ nguyên xuyên suốt trạng thái hoạt động của hệ thống phần mềm.
+
+
+Các thực thể là những đối tượng rất quan trọng của mô hình miền. Việc xác định xem một đối tượng có phải là thực thể hay không rất quan trọng.
+
+Trong trường hợp CSDL quan hệ, một bảng biểu thị một tập hợp các thực thể. Các quy tắc trong bảng biểu thị các thực thể được xác định duy nhất bằng cột khóa chính.
+
+Hành vi này triển khai logic nghiệp vụ có thể thay đổi trạng thái của thực thể. Các thực thể được lưu trữ lâu dài.
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+
+thực thể
+
+Trong Thiết kế hướng miền (thiết kế hướng miền), thực thể là khái niệm cốt lõi đại diện cho một đối tượng miền có nhận dạng duy nhất. Thực thể là một đối tượng được phân biệt với các đối tượng khác dựa trên nhận dạng duy nhất của nó, thay vì thuộc tính hoặc giá trị của nó.
+
+Các thực thể thường là các đối tượng quan trọng nhất trong mô hình miền và chúng thường có logic và hành vi nghiệp vụ phức tạp được liên kết với chúng. Họ cũng có thể có mối quan hệ với các thực thể, đối tượng giá trị hoặc dịch vụ miền khác.
+
+Một thực thể có các đặc điểm sau:
+
+Danh tính: Một thực thể có một danh tính duy nhất để phân biệt nó với các thực thể khác trong mô hình miền. Danh tính thường được biểu thị bằng ID hoặc khóa, chẳng hạn như ID khách hàng hoặc SKU sản phẩm.
+
+Khả năng thay đổi: Các thuộc tính của thực thể có thể thay đổi theo thời gian trong khi vẫn duy trì được danh tính của nó. Ví dụ: tên hoặc địa chỉ của khách hàng có thể thay đổi nhưng ID khách hàng vẫn giữ nguyên.
+
+Hành vi: Một thực thể có hành vi liên quan đến nó, thường là các quy tắc và logic nghiệp vụ phức tạp. Hành vi này thường được gói gọn trong chính thực thể đó.
+
+Mối quan hệ: Một thực thể có thể có mối quan hệ với các thực thể, đối tượng giá trị hoặc dịch vụ miền khác. Ví dụ: khách hàng có thể có lịch sử đặt hàng hoặc giỏ hàng.
+
+Các thực thể là một phần thiết yếu của mô hình miền và phải được thiết kế để thể hiện chính xác miền và các quy tắc kinh doanh của nó. Bằng cách lập mô hình chính xác các thực thể, nhà phát triển có thể tạo ra giải pháp phần mềm linh hoạt và dễ bảo trì hơn, đáp ứng nhu cầu của miền.
+
+Một ví dụ
+
+Hãy xem xét một nền tảng thương mại điện tử nơi khách hàng có thể đặt hàng sản phẩm. Trong mô hình miền này, Đơn hàng là một thực thể. Mỗi đơn hàng có một danh tính duy nhất và bất biến, chẳng hạn như số đơn hàng, giúp phân biệt nó với các đơn hàng khác trong hệ thống.
+
+Thực thể Đơn hàng có thể có một số thuộc tính, chẳng hạn như thông tin khách hàng, chi tiết thanh toán và thông tin giao hàng. Nó cũng có thể có mối quan hệ với các thực thể khác, chẳng hạn như thực thể Sản phẩm và Khách hàng.
+
+Hành vi của thực thể Đơn hàng bao gồm tạo và cập nhật đơn hàng, quản lý xử lý thanh toán và theo dõi trạng thái đơn hàng.
+
+Dưới đây là ví dụ về giao diện của thực thể Đơn hàng trong mã:
+
+public class Order {
+
+private OrderId orderId;
+
+private Customer customer;
+
+private List<Product> products;
+
+private Date orderDate;
+
+private PaymentDetails paymentDetails;
+
+private ShippingDetails shippingDetails;
+
+public Order(OrderId orderId, Customer customer) {
+
+this.orderId = orderId;
+
+this.customer = customer;
+
+this.products = Lists.newArrayList();
+
+this.orderDate = LocalDate.now();
+
+}
+
+public void addProduct(Product product) {
+
+products.add(product);
+
+}
+
+public void removeProduct(Product product) {
+
+products.remove(product);
+
+}
+
+public void processPayment() {
+
+// Process payment logic here...
+
+}
+
+public void shipOrder() {
+
+// Shipping logic here...
+
+}
+
+// Other behavior methods here...
+
+}
+
+Trong ví dụ này, thực thể Đơn hàng có một ID duy nhất (orderId) xác định nó trong hệ thống, cùng với các thuộc tính khác như customer, < /span>, gói gọn logic kinh doanh được liên kết với thực thể đơn hàng., và,, . Thực thể cũng có các phương thức hành vi, chẳng hạn như và, products, orderDatepaymentDetailsshippingDetailsaddProductremoveProductprocessPaymentshipOrder
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+Trang chủTrang chủBảng chú giảiNhận dạng thực thể
+
+Nhận dạng thực thể
+
+Danh tính của một thực thể phải là duy nhất và bất biến, nghĩa là nó không được thay đổi trong suốt vòng đời của thực thể đó. Việc thay đổi danh tính của một thực thể có thể gây ra hậu quả nghiêm trọng, chẳng hạn như gây ra sự không nhất quán về dữ liệu hoặc phá vỡ mối quan hệ với các thực thể hoặc đối tượng giá trị khác. Ví dụ: nếu ID của khách hàng bị thay đổi, điều đó có thể dẫn đến nhầm lẫn khi theo dõi lịch sử mua hàng của họ hoặc các tương tác khác với hệ thống.
+
+Điều quan trọng cần lưu ý là các thuộc tính của thực thể, chẳng hạn như tên hoặc địa chỉ, có thể thay đổi mà không ảnh hưởng đến danh tính của thực thể đó. Những thay đổi này phải được quản lý thông qua việc đóng gói thích hợp hành vi và logic kinh doanh của thực thể.
+
+Tóm lại, danh tính của một thực thể phải là duy nhất và bất biến, đồng thời những thay đổi đối với các thuộc tính của thực thể sẽ không ảnh hưởng đến danh tính của thực thể đó. Bằng cách tuân thủ nguyên tắc này, các nhà phát triển có thể tạo ra một mô hình miền nhất quán và dễ bảo trì hơn, thể hiện chính xác miền kinh doanh.
+
+Làm thế nào để chọn một danh tính thực thể tốt
+
+Chọn danh tính phù hợp cho một thực thể là một phần quan trọng trong việc thiết kế mô hình miền trong Thiết kế hướng miền (thiết kế hướng miền). Dưới đây là một số phương pháp hay để chọn danh tính của một thực thể:
+
+Chọn một danh tính duy nhất: Danh tính của một thực thể phải là duy nhất trong mô hình miền và nó không được thay đổi trong suốt vòng đời của thực thể. Danh tính của một thực thể phải được xác định theo yêu cầu kinh doanh, chẳng hạn như mã định danh duy nhất như số sê - ri, ID khách hàng hoặc số an sinh xã hội.
+
+Chọn danh tính ổn định: Danh tính của thực thể phải ổn định, nghĩa là danh tính không được thay đổi theo thời gian. Danh tính ổn định cho phép tính nhất quán và độ chính xác trong mô hình miền và nó có thể ngăn ngừa lỗi trong hệ thống. Ví dụ: nếu ID của khách hàng thay đổi, việc theo dõi lịch sử mua hàng của họ hoặc các tương tác khác với hệ thống có thể gây nhầm lẫn.
+
+Chọn danh tính dễ nhận dạng: Danh tính của thực thể phải dễ nhận dạng, tốt nhất là bởi người đọc. Ví dụ: việc sử dụng UUID hoặc GUID có thể không dễ nhận biết như tên hoặc số ID của khách hàng.
+
+Chọn một danh tính có thể được sử dụng nhất quán trong toàn bộ mô hình miền: Danh tính của một thực thể phải nhất quán trong toàn bộ mô hình miền và nó phải được sử dụng nhất quán trong mọi ngữ cảnh mà thực thể đó được tham chiếu.
+
+Xem xét khả năng mở rộng và hiệu suất: Việc chọn một danh tính có thể mở rộng quy mô và hoạt động tốt cũng rất quan trọng, đặc biệt đối với các hệ thống có khối lượng dữ liệu lớn hoặc thông lượng cao.
+
+Bằng cách làm theo những thực tiễn này, nhà phát triển có thể chọn danh tính phù hợp cho các thực thể thể hiện chính xác mô hình miền và cung cấp giải pháp phần mềm linh hoạt và có thể bảo trì.
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
