@@ -32,6 +32,6 @@ MyFormat.latex_main(main)
 
 MyView.CloseTab()
 MyView.Target(2)
-# MyView.CloseTerminal()
+MyView.CloseTerminal()
 MyView.CloseScrollBar()
-# MyView.OpenLatex()
+MyView.OpenLatex()
