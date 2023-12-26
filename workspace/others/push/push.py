@@ -5,14 +5,14 @@ from modules.MyGit import MyGit
 
 message = "VuVanNghia20206205"
 
-git =  os.path.join(os.getcwd(), '../../../')
-contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
-main =  os.path.join(os.getcwd(), '../../../baocao/main.tex')
+git_folder =  os.path.join(os.getcwd(), '../../../')
+# contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
+# main =  os.path.join(os.getcwd(), '../../../baocao/main.tex')
 # init_path =  os.path.join(os.getcwd(), '../../../baocao/contents/start/init.sty')
 # workspace_path = os.path.join(os.getcwd(), '../../report.code-workspace')
 # gitignore_path = os.path.join(git_path, ".gitignore") 
 
-MyGit.chdir(git)
+MyGit.chdir(git_folder)
 MyGit.add()
 MyGit.commit(message)
 
@@ -23,10 +23,10 @@ MyGit.commit(message)
 # MyFormat.basic(init_path)
 # MyFormat.workspace(workspace_path)
 
-MyView.CloseTab()
-MyView.Target(2)
-MyView.CloseTerminal()
-MyView.CloseScrollBar()
-# MyView.CollapseFolders()
-# MyView.OpenGit()
-MyView.OpenLatex()
+# MyView.CloseTab()
+# MyView.Target(2)
+# MyView.CloseTerminal()
+# MyView.CloseScrollBar()
+# # MyView.CollapseFolders()
+# # MyView.OpenGit()
+# MyView.OpenLatex()
