@@ -7,9 +7,7 @@ def TimKiem(root_dir, ext):
  root_dir, f'**/*{ext}'), recursive=True)
 
 
-folder = os.path.join(os.getcwd(), "../../")
-folder =   r"C:\Users\vvn20206205\Desktop\doan"
-print( folder)
+folder = os.path.join(os.getcwd(), r"..\\..\\..\\")
 files = TimKiem(folder, '.srt')
 files = TimKiem(folder, '.tex')
 files = TimKiem(folder, '.md')
