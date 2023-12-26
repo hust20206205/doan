@@ -15,9 +15,8 @@ MyGit.commit(message)
 workspace_path =   glob.glob(os.path.join(git_folder, f'**/*.code-workspace'), recursive=True)
 gitignore_path =   glob.glob(os.path.join(git_folder, f'**/*.gitignore'), recursive=True)
 
-
-MyFormat.space(gitignore_path)
-MyFormat.space(workspace_path)
+[MyFormat.space(i) for i in workspace_path]
+[MyFormat.space(i) for i in gitignore_path] 
 
 # contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
 # main =  os.path.join(os.getcwd(), '../../../baocao/main.tex')
