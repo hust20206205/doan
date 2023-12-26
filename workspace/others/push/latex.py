@@ -16,6 +16,7 @@ input = input.replace(")", "")
 input = input.replace("/", "")
 input = input.replace("-", "")
 input = input.replace("%", "")
+input = input.replace("_", " ")
 while "  " in input:
     input = input.replace("  ", " ")
 print(input)
