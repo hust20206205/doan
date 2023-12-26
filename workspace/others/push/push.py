@@ -11,7 +11,7 @@ MyGit.chdir(git_folder)
 MyGit.add()
 MyGit.commit(message)
 
-workspace_path = os.path.join(os.getcwd(), '../../report.code-workspace')
+workspace_path = os.path.join(os.getcwd(), '../../vvn20206205.code-workspace')
 gitignore_path = os.path.join(git_folder, ".gitignore") 
 
 MyFormat.space(gitignore_path)
