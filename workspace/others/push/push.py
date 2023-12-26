@@ -16,22 +16,22 @@ workspace_path = glob.glob(os.path.join(
     git_folder, f'**/*.code-workspace'), recursive=True)
 gitignore_path = glob.glob(os.path.join(
     git_folder, f'**/*.gitignore'), recursive=True)
+start_path = glob.glob(os.path.join(
+    git_folder, f'**/*.sty'), recursive=True)
 
 [MyFormat.space(i) for i in workspace_path]
 [MyFormat.space(i) for i in gitignore_path]
+[MyFormat.space(i) for i in start_path]
 
 # contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
-# main =  os.path.join(os.getcwd(), '../../../baocao/main.tex')
-# init_path =  os.path.join(os.getcwd(), '../../../baocao/contents/start/init.sty')
+# main =  os.path.join(os.getcwd(), '../../../baocao/main.tex') 
 
 
 # MyFormat.latex(contents)
-# MyFormat.latex(main)
-# MyFormat.markdown(git_path)
-# MyFormat.basic(init_path)
+# MyFormat.latex(main) 
 
 MyView.CloseTab()
 MyView.Target(2)
 MyView.CloseTerminal()
 MyView.CloseScrollBar()
-MyView.OpenLatex()
+# MyView.OpenLatex()
