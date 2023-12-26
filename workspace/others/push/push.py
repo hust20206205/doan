@@ -6,17 +6,19 @@ from modules.MyView import MyView
 
 message = "VuVanNghia20206205"
 
-git_folder =  os.path.join(os.getcwd(), '../../../')
+git_folder = os.path.join(os.getcwd(), '../../../')
 
 MyGit.chdir(git_folder)
 MyGit.add()
 MyGit.commit(message)
 
-workspace_path =   glob.glob(os.path.join(git_folder, f'**/*.code-workspace'), recursive=True)
-gitignore_path =   glob.glob(os.path.join(git_folder, f'**/*.gitignore'), recursive=True)
+workspace_path = glob.glob(os.path.join(
+    git_folder, f'**/*.code-workspace'), recursive=True)
+gitignore_path = glob.glob(os.path.join(
+    git_folder, f'**/*.gitignore'), recursive=True)
 
 [MyFormat.space(i) for i in workspace_path]
-[MyFormat.space(i) for i in gitignore_path] 
+[MyFormat.space(i) for i in gitignore_path]
 
 # contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
 # main =  os.path.join(os.getcwd(), '../../../baocao/main.tex')
