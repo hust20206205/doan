@@ -1,4 +1,5 @@
 import os
+import glob
 from modules.MyGit import MyGit
 from modules.MyFormat import MyFormat
 from modules.MyView import MyView
@@ -11,8 +12,9 @@ MyGit.chdir(git_folder)
 MyGit.add()
 MyGit.commit(message)
 
-workspace_path = os.path.join(os.getcwd(), '../../vvn20206205.code-workspace')
-gitignore_path = os.path.join(git_folder, ".gitignore") 
+workspace_path =   glob.glob(os.path.join(git_folder, f'**/*.code-workspace'), recursive=True)
+gitignore_path =   glob.glob(os.path.join(git_folder, f'**/*.gitignore'), recursive=True)
+
 
 MyFormat.space(gitignore_path)
 MyFormat.space(workspace_path)
