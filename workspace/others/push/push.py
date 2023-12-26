@@ -23,12 +23,12 @@ start_path = glob.glob(os.path.join(
 [MyFormat.space(i) for i in gitignore_path]
 [MyFormat.space(i) for i in start_path]
 
-contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
-main =  os.path.join(os.getcwd(), '../../../baocao/main.tex') 
+contents =  os.path.join(git_folder, 'baocao/contents')
+main =  os.path.join(git_folder, 'baocao/main.tex') 
 
-
-[MyFormat.latex_main(i) for i in main]
-[MyFormat.latex_contents(i) for i in contents]
+MyFormat.latex_main(main)
+[MyFormat.latex_contents(i) for i in  glob.glob(os.path.join(
+    contents, f'**/*.tex'), recursive=True)]
 
 MyView.CloseTab()
 MyView.Target(2)
