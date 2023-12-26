@@ -11,7 +11,10 @@
     "code-runner.executorMap": {
       "python": " clear && cd $dir && python $fileName",
       "markdown": " clear && cd $dir && if [ $fileName = README.md ]; then ( cd ../../workspace/others/push && python push.py ); else ( echo NO  README.md ); fi;"
-    }
+    },
+    "latex-workshop.latex.autoBuild.run": "never",
+    // "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "workbench.colorTheme": "Dracula"
   },
   "extensions": {
     "recommendations": [
