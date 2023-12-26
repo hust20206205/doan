@@ -24,13 +24,11 @@ start_path = glob.glob(os.path.join(
 [MyFormat.space(i) for i in start_path]
 
 contents =  os.path.join(os.getcwd(), '../../../baocao/contents')
-print("🐍 File: push/push.py | Line: 27 | undefined ~ contents",contents)
 main =  os.path.join(os.getcwd(), '../../../baocao/main.tex') 
-print("🐍 File: push/push.py | Line: 29 | undefined ~ main",main)
 
 
-# MyFormat.latex(contents)
-# MyFormat.latex(main) 
+[MyFormat.latex_main(i) for i in main]
+[MyFormat.latex_contents(i) for i in contents]
 
 MyView.CloseTab()
 MyView.Target(2)
