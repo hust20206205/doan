@@ -420,8 +420,6 @@ Thiết kế hướng miền đề xuất sử dụng ngôn ngữ chung để gi
 
 \end{figure}
 
-
-
 %@ Tích hợp liên tục
 
 %@ Tích hợp liên tục
@@ -431,6 +429,7 @@ Thiết kế hướng miền đề xuất sử dụng ngôn ngữ chung để gi
 %@ Tích hợp liên tục
 
 %@ Tích hợp liên tục
+
 %!<! - - @Tích hợp Liên tục (Continuous Integration) - - >
 
 Tích hợp Liên tục (Continuous Integration): là việc các thành viên trong nhóm phát triển tích hợp mã nguồn vào một hệ thống chung thường xuyên. Khi có mã nguồn mới việc tích hợp liên tục sẽ tự động kiểm thử và xây dựng giảm xung đột giữa các phiên bản mã nguồn khác nhau, giúp phát hiện và sửa lỗi sớm hơn.
@@ -520,6 +519,7 @@ Khi cùng vận hành và phát triển xung đột có thể xảy ra ở cùng
 % thời gian khác nhau
 
 % http://localhost nên không có CD
+
 % \section{Bản đồ bối cảnh (Context Maps)}
 
 Các bối cảnh bị giới hạn phải độc lập trong bối cảnh riêng và có mô hình miền riêng, nhưng các bối cảnh bị giới hạn cần tương tác, giao tiếp để trao đổi thông tin. Vì vậy các bối cảnh bị giới hạn có thể có mối quan hệ với nhau. Những mối quan hệ này cần được quản lý chặt chẽ để hoạt động độc lập, nhất quán và linh hoạt. Do đó, cần phải ghi lại các mối quan hệ thông qua việc sử dụng bản đồ bối cảnh. \emph{Bản đồ bối cảnh (Context Maps)} là sự thể hiện trực quan của hệ thống, thể hiện các thành phần và mối quan hệ giữa các thành phần.
@@ -556,7 +556,35 @@ Các bối cảnh bị giới hạn phải độc lập trong bối cảnh riên
 
 % \section{Các mối quan hệ bối cảnh bị giới hạn}
 
-% \input{contents/cac_moi_quan_he_boi_canh_gioi_han}
+Có 3 loại mối quan hệ giữa các bối cảnh bị giới hạn là:
+
+\begin{itemize}
+
+\item Mối quan hệ đối xứng (Symmetric Relationship)
+
+\textbf{Mô tả:} Thể hiện sự tương tác 2 chiều giữa 2 bối cảnh bị giới hạn .
+
+\item Mối quan hệ bất đối xứng (Asymmetric Relationship)
+
+\textbf{Mô tả:} Thể hiện sự tương tác 1 chiều giữa 2 các bối cảnh bị giới hạn .
+
+\item Mối quan hệ 1 - nhiều (One to Many Relationship)
+
+\textbf{Mô tả:} Thể hiện sự tương tác 1 chiều giữa 1 bối cảnh bị giới hạn với nhiều bối cảnh bị giới hạn khác.
+
+\end{itemize}
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/cac_moi_quan_he_boi_canh_gioi_han/main.png}
+
+\caption{Các mối quan hệ bối cảnh bị giới hạn}
+
+\end{figure}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -576,11 +604,83 @@ Các bối cảnh bị giới hạn phải độc lập trong bối cảnh riên
 
 % \subsubsection{Mô hình riêng biệt (Separate Ways)}
 
-% \input{contents/mo_hinh_rieng_biet_separate_ways}
+Mô hình riêng biệt (Separate Ways) khi các bối cảnh bị giới hạn có quan hệ riêng biệt, không có sự phụ thuộc. Vì vậy, các bối cảnh bị giới hạn này có ngôn ngữ, mô hình, mục đích độc lập và thực thi riêng biệt. Các nhóm phát triển không phải cộng tác hay phối hợp với nhau từ đó đem lại lợi ích dễ dàng bảo trì và mở rộng hệ thống.
+
+\begin{example} Trong miền vấn đề ngân hàng, thẻ tín dụng và khoản vay mua nhà không có mối quan hệ.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+
+\caption{Ví dụ mô hình riêng biệt (Separate Ways)}
+
+\end{figure}
+
+\end{example}
+
+
 
 % \subsubsection{Mô hình hạt nhân chung (Shared Kernel)}
 
-% \input{contents/mo_hinh_hat_nhan_chung_shared_kernel}
+Trong thực tế, nhiều bối cảnh bị giới hạn phụ thuộc lẫn nhau. Mô hình hợp tác (Partnership) tạo điều kiện cho việc giao tiếp và cộng tác giữa các bối cảnh bị giới hạn phụ thuộc. Tuy nhiên, sự phụ thuộc này dẫn đến mức độ kết hợp cao giữa các nhóm và bối cảnh bị giới hạn, dẫn tới mất đi tính độc lập.
+
+\textit{Lưu ý: Mô hình hợp tác không phải là mô hình của các mẫu chiến lược trong thiết kế huớng miền.}
+
+Để giải quyết vấn đề bối cảnh bị giới hạn phụ thuộc lẫn nhau chúng ta có mô hình hạt nhân chung. Mô hình hạt nhân chung (Shared Kernel) cho phép các bối cảnh bị giới hạn có phần chia sẻ chung và có ranh giới phân định rõ ràng. Từ đó, tách việc quản lí các mô hình hạt nhân chung này một cách độc lập với phần còn lại của bối cảnh bị giới hạn . Khi cần thay đổi mà không phải của mô hình hạt nhân chung thì nhóm sẽ hoạt động độc lập. Thông thường, mô hình hạt nhân chung được hiện thực hóa bằng các thư viện chung. Tuy nhiên, chỉ sử dụng mô hình hạt nhân chung nếu quan hệ của các bối cảnh bị giới hạn nhỏ và ổn định để tránh quan hệ phức tạp và ràng buộc chặt chẽ.
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+\begin{example} Trong miền vấn đề ngân hàng, thẻ tín dụng và khoản vay mua nhà không có mối quan hệ.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+
+\caption{Ví dụ mô hình riêng biệt (Separate Ways)}
+
+\end{figure}
+
+\end{example}
+
+% %! $VD: hình giao như 2 tập hợp - - >
 
 % \subsection{Mối quan hệ bất đối xứng (Asymmetric Relationship)}
 
