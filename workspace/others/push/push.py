@@ -27,8 +27,8 @@ contents =  os.path.join(git_folder, 'baocao/contents')
 main =  os.path.join(git_folder, 'baocao/main.tex') 
 
 MyFormat.latex_main(main)
-[MyFormat.latex_contents(i) for i in  glob.glob(os.path.join(
-    contents, f'**/*.tex'), recursive=True)]
+# [MyFormat.latex_contents(i) for i in  glob.glob(os.path.join(
+    # contents, f'**/*.tex'), recursive=True)]
 
 MyView.CloseTab()
 MyView.Target(2)
