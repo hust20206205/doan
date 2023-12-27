@@ -584,8 +584,6 @@ Có 3 loại mối quan hệ giữa các bối cảnh bị giới hạn là:
 
 \end{figure}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -619,8 +617,6 @@ Mô hình riêng biệt (Separate Ways) khi các bối cảnh bị giới hạn 
 \end{figure}
 
 \end{example}
-
-
 
 % \subsubsection{Mô hình hạt nhân chung (Shared Kernel)}
 
@@ -684,29 +680,320 @@ Trong thực tế, nhiều bối cảnh bị giới hạn phụ thuộc lẫn nh
 
 % \subsection{Mối quan hệ bất đối xứng (Asymmetric Relationship)}
 
-% \input{contents/moi_quan_he_bat_doi_xung_asymmetric_relationship}
+Trong mối quan hệ bất đối xứng, một bối cảnh bị giới hạn có sự phụ thuộc vào một bối cảnh bị giới hạn khác. Mối quan hệ này được mô tả bằng cách gán vai trò cho bối cảnh bị giới hạn :
+
+\begin{itemize}
+
+\item \textbf{Bối cảnh bị giới hạn thượng nguồn (Upstream):}
+
+\begin{itemize}
+
+\item Bối cảnh bị giới hạn cung cấp cho bối cảnh bị giới hạn khác.
+
+\item Ký hiệu: U
+
+\end{itemize}
+
+\item \textbf{Bối cảnh bị giới hạn hạ lưu (Downstream):}
+
+\begin{itemize}
+
+\item Bối cảnh bị giới hạn phụ thuộc vào bối cảnh bị giới hạn khác.
+
+\item Ký hiệu: D
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{example} Mối quan hệ bất đối xứng giữa bối cảnh bị giới hạn A và bối cảnh bị giới hạn B.
+
+\begin{itemize}
+
+\item Bối cảnh bị giới hạn A ràng buộc với bối cảnh bị giới hạn B
+
+\item Bối cảnh bị giới hạn A đóng vai trò là bối cảnh bị giới hạn hạ lưu (Downstream)
+
+\item Bối cảnh bị giới hạn B đóng vai trò là bối cảnh bị giới hạn thượng nguồn (Upstream)
+
+\item Bối cảnh bị giới hạn A có kiến thức về các mô hình trong bối cảnh bị giới hạn B
+
+\item Bối cảnh bị giới hạn B không có bất kỳ kiến thức nào về mô hình trong bối cảnh bị giới hạn A
+
+\end{itemize}
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/moi_quan_he_bat_doi_xung/main.drawio.png}
+
+\caption{Ví dụ mối quan hệ bất đối xứng}
+
+\end{figure}
+
+\end{example}
 
 % \subsubsection{Mô hình khách hàng - nhà cung cấp (Customer - Supplier)}
 
-% \input{contents/mo_hinh_khach_hang_nha_cung_cap_customer_supplier}
+Mô hình khách hàng - nhà cung cấp (Customer - Supplier) được thể hiện rằng bối cảnh bị giới hạn thượng nguồn đáp ứng nhu cầu của bối cảnh bị giới hạn hạ lưu.
+
+Khi đó:
+
+\begin{itemize}
+
+\item Bối cảnh bị giới hạn thượng nguồn được gọi là nhà cung cấp.
+
+\item Bối cảnh bị giới hạn hạ lưu được gọi là khách hàng.
+
+\end{itemize}
+
+Trong thực tế, nhóm phát triển nhà cung cấp luôn tham khảo ý kiến của nhóm phát triển khách hàng và có bộ kiểm thử để đảm bảo rằng dịch vụ của nhà cung cấp đáp ứng được yêu cầu của khách hàng.
 
 % \subsubsection{Mô hình tuân thủ (Conformist)}
 
-% \input{contents/mo_hinh_tuan_thu_conformist}
+Trong mô hình khách hàng - nhà cung cấp, nếu nhà cung cấp thực hiện tốt yêu cầu thì khách hàng cần tuân thủ chặt chẽ. Mô hình tuân thủ (Conformist) là một mối quan hệ trong đó bối cảnh bị giới hạn hạ lưu áp dụng mô hình, ngôn ngữ chung và các khái niệm của bối cảnh bị giới hạn thượng nguồn.
+
+Trong mô hình tuân thủ bối cảnh bị giới hạn hạ lưu được ký hiệu là CF.
+
+%! $VD: - - >
+
+%! $VD: A - CF - U - B - - >
+
+%! $VD: A - users(id, name) - B cũng users(id, name) - - >
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+\begin{example} Trong miền vấn đề ngân hàng, thẻ tín dụng và khoản vay mua nhà không có mối quan hệ.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+
+\caption{Ví dụ mô hình riêng biệt (Separate Ways)}
+
+\end{figure}
+
+\end{example}
+
+
 
 % \subsubsection{Mô hình chống đổ vỡ (Anti Corruption Layer)}
 
-% \input{contents/mo_hinh_chong_do_vo_anti_corruption_layer}
+Trong mô hình khách hàng - nhà cung cấp, nếu nhà cung cấp có thể thay đổi linh hoạt không đảm bảo đáp ứng nhu cầu của khách hàng thì khách hàng cần có giải pháp xử lí. Mô hình chống đổ vỡ (Anti Corruption Layer) là một mối quan hệ trong đó bối cảnh bị giới hạn hạ lưu sử dụng một lớp để dịch giữa ngôn ngữ của nó và ngôn ngữ của bối cảnh bị giới hạn thượng nguồn.
+
+Trong mô hình chống đổ vỡ, mỗi bối cảnh bị giới hạn có mô hình riêng biệt và lớp chống đổ vỡ cần kiến thức về mô hình hạ lưu và thượng nguồn để bảo vệ hạ lưu và duy trì tính toàn vẹn.
+
+%@ Façade
+
+%@ Adapter
+
+Trong mô hình chống đổ vỡ bối cảnh bị giới hạn hạ lưu được ký hiệu là ACL.
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+\begin{example} Trong miền vấn đề ngân hàng, thẻ tín dụng và khoản vay mua nhà không có mối quan hệ.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+
+\caption{Ví dụ mô hình riêng biệt (Separate Ways)}
+
+\end{figure}
+
+\end{example}
+
+
 
 % \subsection{Mối quan hệ 1 - nhiều (One to Many Relationship)}
 
 % \subsubsection{Dịch vụ máy chủ mở (Open Host Service)}
+Dịch vụ máy chủ mở (Open Host Service) là nhà cung cấp trong mô hình khách hàng - nhà cung cấp, dịch vụ máy chủ mở hiển thị một API công khai cho các bối cảnh bị giới hạn khác sử dụng chức năng của nhà cung cấp.
 
-% \input{contents/dich_vu_may_chu_mo_open_host_srv}
+Trong bản đồ bối cảnh, dịch vụ máy chủ mở được ký hiệu là OHS.
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+\begin{example} Trong miền vấn đề ngân hàng, thẻ tín dụng và khoản vay mua nhà không có mối quan hệ.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+
+\caption{Ví dụ mô hình riêng biệt (Separate Ways)}
+
+\end{figure}
+
+\end{example}
+
+
 
 % \subsubsection{Ngôn ngữ được xuất bản (Published Language)}
 
-% \input{contents/ngon_ngu_duoc_xuat_ban_published_language}
+Khi ngôn ngữ chung ở dịch vụ máy chủ mở được các nhóm phát triển trong bối cảnh bị giới hạn hạ lưu chấp nhận. Ngôn ngữ chung này được gọi là ngôn ngữ được xuất bản (Published Language). Ngôn ngữ được xuất bản có lợi ích là tính thống nhất trong hệ thống tuy nhiên cần phân tích kĩ vì nó có thể tạo ra sự nhầm lẫn trong bối cảnh bị giới hạn hạ lưu nào đó.
+
+Trong bản đồ bối cảnh, ngôn ngữ được xuất bản kết hợp dịch vụ máy chủ mở được ký hiệu là OHS|PL.
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Vẽ lại bản đồ tiếng Việt
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+% Từ bản đồ lấy vi dụ cho các mô hình
+
+\begin{example} Trong miền vấn đề ngân hàng, thẻ tín dụng và khoản vay mua nhà không có mối quan hệ.
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/mo_hinh_rieng_biet_separate_ways/main.drawio.png}
+
+\caption{Ví dụ mô hình riêng biệt (Separate Ways)}
+
+\end{figure}
+
+\end{example}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
