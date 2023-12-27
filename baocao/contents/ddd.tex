@@ -25,6 +25,7 @@ Trong kiến trúc vi dịch vụ, thiết kế hướng miền đảm bảo m�
 \section{Cốt lõi của thiết kế hướng miền}
 
 % Giới thiệu về các mẫu chiến lược và các mẫu kỹ thuật
+
 Thiết kế hướng miền cung cấp 2 loại mẫu:
 
 \begin{itemize}
@@ -45,7 +46,25 @@ Thiết kế hướng miền cung cấp 2 loại mẫu:
 
 \end{figure}
 
-% \input{contents/chi_tiet_va_ap_dung_thiet_ke_huong_mien}
+Thiết kế hướng miền cung cấp 2 loại mẫu:
+
+\begin{itemize}
+
+\item \emph{Các mẫu chiến lược (Strategic Patterns):} Phân chia một miền lớn và phức tạp thành các phần nhỏ hơn với ranh giới được xác định rõ ràng. Giúp phân chia một miền lớn hợp lý.
+
+\item \emph{Các mẫu kỹ thuật (Tactical Patterns):} Hiện thực hóa các khái niệm và qui trình trong thành phần thành các thiết kế hệ thống phần mềm. Giúp hệ thống phù hợp với kinh doanh.
+
+\end{itemize}
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.5]{pictures/cac_mau_chien_luoc_va_cac_mau_ky_thuat/main.drawio.png}
+
+\caption{Tổng quan về Strategic Patterns và Tactical Patterns}
+
+\end{figure}
 
 % \subsection{Chi tiết về các mẫu chiến lược và các mẫu kỹ thuật}
 
@@ -53,11 +72,103 @@ Thiết kế hướng miền cung cấp 2 loại mẫu:
 
 % \chapter{Các mẫu chiến lược}
 
-% \input{contents/cac_mau_chien_luoc}
+Các mẫu chiến lược phân tích nghiệp vụ kinh doanh sau đó đưa ra việc phân chia các thành phần và hiểu mối quan hệ của các thành phần đó. Từ đó, các mẫu chiến lược giúp xác định các thành phần quan trọng của hệ thống, đảm bảo kiến trúc phần mềm phản ánh đúng các yêu cầu kinh doanh. Từ việc phân chia hệ thống thành các thành phần nhỏ, chúng ta có thể tạo ra hệ thống mở rộng dễ dàng, phát triển linh hoạt theo nhu cầu kinh doanh.
+
+Các mẫu chiến lược bao gồm:
+
+\begin{itemize}
+
+% các mục nhỏ ben dưới
+
+% các mục nhỏ ben dưới
+
+% các mục nhỏ ben dưới
+
+% các mục nhỏ ben dưới
+
+% các mục nhỏ ben dưới
+
+% các mục nhỏ ben dưới
+
+\item Muc1
+
+\item Muc2
+
+\item Muc1
+
+\item Muc2
+
+\item Muc1
+
+\item Muc2
+
+\item Muc1
+
+\item Muc2
+
+\end{itemize}
+
+% nội dung trang lớn lên để hết giấy
+
+% nội dung trang lớn lên để hết giấy
+
+% nội dung trang lớn lên để hết giấy
+
+% nội dung trang lớn lên để hết giấy
+
+% nội dung trang lớn lên để hết giấy
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.9]{pictures/cac_mau_chien_luoc/temp.png}
+
+\caption{Sơ đồ về các thành phần trong mô hình chiến lược}
+
+\end{figure}
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+
 
 % \section{Miền phụ (Sub - Domain)}
 
-% \input{contents/mien_phu_sub_domain}
+Một miền lớn được tạo thành từ nhiều \emph{miền phụ (Sub - Domain)}. Trong thực tế, một miền kinh doanh phức tạp không thể có một chuyên gia ngành có kiến thức về tất cả các miền phụ.
+
+\begin{example} Trong miền thương mại điện tử lớn có thể có một số miền phụ sau:
+
+\begin{itemize}
+
+\item \textbf{Miền phụ quản lý hàng tồn kho:} liên quan đến việc quản lý sản phẩm trong kho hàng.
+
+\item \textbf{Miền phụ quản lý khách hàng:} liên quan đến việc quản lý tài khoản khách hàng.
+
+\item \textbf{Miền phụ vận chuyển:} liên quan đến việc quản lý việc vận chuyển giao hàng.
+
+\end{itemize}
+
+\end{example}
+
+
 
 % \subsection{Phân loại các miền phụ}
 
