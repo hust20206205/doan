@@ -16,8 +16,8 @@
 // latex
 // pip install Pygments
 // Tự động run
-"latex-workshop.latex.autoBuild.run": "never",
-// "latex-workshop.latex.autoBuild.run": "onFileChange",
+// "latex-workshop.latex.autoBuild.run": "never",
+"latex-workshop.latex.autoBuild.run": "onFileChange",
 // Tắt cửa sổ lỗi
 "latex-workshop.message.warning.show": false,
 "latex-workshop.message.error.show": false,
