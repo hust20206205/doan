@@ -1026,25 +1026,677 @@ Trong bản đồ bối cảnh, ngôn ngữ được xuất bản kết hợp d�
 
 \chapter{Các mẫu kỹ thuật}
 
-% \input{contents/cac_mau_ky_thuat}
+Các mẫu kỹ thuật được sử dụng để lập mô hình và hiện thực hóa các thành phần riêng lẻ của hệ thống microservices. Các mẫu kỹ thuật tập trung mô hình hóa miền và triển khai logic nghiệp vụ trong lập trình.
+
+Các yếu tố các mẫu kỹ thuật bao gồm:
+
+\begin{itemize}
+
+\item Muc1
+
+\item Muc1
+
+\item Muc1
+
+\item Muc1
+
+\item Muc1
+
+\item Muc1
+
+\item Muc1
+
+\item Muc1
+
+\item Muc1
+
+\item Muc2
+
+\end{itemize}
+
+\begin{figure}[H]
+
+\centering
+
+\includegraphics[scale = 0.8]{pictures/cac_mau_ky_thuat/temp.png}
+
+\caption{vvn20206205}
+
+\end{figure}
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
+
+%!<! - - $ Vẽ lại sau: - - >
 
 \section{Đối tượng miền (Domain Object)}
 
-% \input{contents/cac_doi_tuong_mien_domain_object}
+Đối tượng miền (Domain Object) được sử dụng để mô hình hóa mô hình miền. Đối tượng miền được sử dụng để triển khai các quy tắc, các ràng buộc và các mối quan hệ của nghiệp vụ.
+
+Đối tượng miền bao gồm:
+
+\begin{itemize}
+
+\item Đối tượng thực thể (Entities Objects)
+
+\item Đối tượng giá trị (Value Objects)
+
+\item Miền dịch vụ (Service Domain)
+
+\end{itemize}
+
+
 
 \subsection{Đối tượng thực thể (Entities Objects)}
 
-\input{contents/doi_tuong_thuc_the_entities_objects}
+% \subsection{Đối tượng thực thể (Entities Objects)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Định nghĩa:
+
+% <!-- Một thực thể đại diện cho một đối tượng kinh doanh có thể nhận dạng duy nhất, bao gồm các thuộc tính và hành vi miền được xác định rõ ràng. -->
+
+\begin{example}
+
+\end{example}
+
+% mối quan hệ giữa logic nghiệp vụ và các đối tượng thực thể.
+
+% <!-- Một thực thể được xác định duy nhất trong một bối cảnh giới hạn. -->
+
+% Các thực thể này và danh tính của chúng chỉ có ý nghĩa trong bối cảnh giới hạn tương ứng của chúng. Một thực thể có một tập hợp các thuộc tính được xác định bởi ngôn ngữ chung cho ngữ cảnh giới hạn .
+
+% Một thực thể có một hành vi, nghĩa là nó đóng gói logic nghiệp vụ. Và logic kinh doanh này được thể hiện qua cách thức hoạt động.
+
+% Khi các hoạt động này được thực hiện đối với thực thể, nó sẽ dẫn đến sự thay đổi trạng thái của thực thể.
+
+Khi một số thao tác này được thực thi, chúng sẽ thay đổi trạng thái của tài khoản. Ví dụ: số dư có thể tăng hoặc giảm do thực hiện một số thao tác này.
+
+13
+
+00: 02: 23, 100--> 00: 02: 29, 160
+
+Hãy xác định logic kinh doanh là gì, không phải kinh doanh. Logic đôi khi được gọi là logic miền.
+
+14
+
+00: 02: 29, 160--> 00: 02: 38, 680
+
+Logic nghiệp vụ có thể bao gồm các quy tắc nghiệp vụ. Ví dụ: việc rút tiền sẽ không thành công nếu số dư nhỏ hơn số tiền rút.
+
+15
+
+00: 02: 38, 850--> 00: 02: 55, 860
+
+Nó có thể là sự xác nhận. Ví dụ: số tiền rút không được nhỏ hơn hoặc bằng 0. Nó có thể là các phép tính, ví dụ, tính chéo thành phần cho tài khoản séc và nó có thể là các hoạt động có thể thay đổi trạng thái của thực thể.
+
+16
+
+00: 02: 55, 860--> 00: 03: 05, 880
+
+Ví dụ: logic giao dịch rút tiền có thể được kết hợp để thực hiện tất cả những điều này được gọi là logic nghiệp vụ nói chung.
+
+17
+
+00: 03: 06, 330--> 00: 03: 15, 600
+
+Hãy xem một ví dụ về logic nghiệp vụ hoặc hành vi. Trong trường hợp tài khoản séc, có thể có hoạt động rút tiền từ tài khoản.
+
+18
+
+00: 03: 15, 900--> 00: 03: 28, 320
+
+Hoạt động rút tiền này có thể lấy số tiền rút làm đối số. Việc kiểm tra đầu tiên sẽ được thực hiện khi thực hiện thao tác rút tiền là kiểm tra số dư khả dụng.
+
+19
+
+00: 03: 28, 320--> 00: 03: 39, 840
+
+Nếu số dư khả dụng nhỏ hơn số tiền rút thì giao dịch sẽ bị từ chối. Nếu không, giao dịch sẽ được chấp nhận và số dư sẽ bị giảm đi theo số tiền rút.
+
+20
+
+00: 03: 40, 140--> 00: 03: 49, 020
+
+Đã đến lúc làm một bài kiểm tra nhanh. Hãy nhìn vào thực thể tài khoản kiểm tra này. Chúng ta có nghĩ rằng thực thể này bộc lộ một số logic kinh doanh không?
+
+21
+
+00: 03: 50, 700--> 00: 03: 58, 350
+
+Câu trả lời là không, không phải vậy, và lý do tôi nói vậy là vì những thao tác này chỉ là getters và setters.
+
+22
+
+00: 03: 58, 350--> 00: 04: 08, 820
+
+Tương tự, thao tác này là sở hữu đối tượng vào CSDL . Vì vậy, nhìn từ bề ngoài, có vẻ như thực thể này không bao gồm bất kỳ hoạt động kinh doanh nào.
+
+23
+
+00: 04: 08, 820--> 00: 04: 21, 180
+
+Các thực thể logic chỉ có ý nghĩa trong bối cảnh ranh giới mà chúng được xác định. Người ta thường thấy các tên thực thể giống nhau xuất hiện trên nhiều ngữ cảnh được liên kết.
+
+24
+
+00: 04: 21, 630--> 00: 04: 29, 200
+
+Nhưng chúng ta phải nhớ rằng định nghĩa của thực thể trong bối cảnh giới hạn này không được đảm bảo giữ nguyên.
+
+25
+
+00: 04: 29, 310--> 00: 04: 39, 300
+
+Ví dụ: thực thể khách hàng trong tài khoản bán lẻ có thể trông không giống với thực thể khách hàng trong bối cảnh giới hạn thẻ tín dụng.
+
+26
+
+00: 04: 39, 660--> 00: 04: 53, 780
+
+Hãy nhớ rằng các thực thể được xác định duy nhất trong một ngữ cảnh giới hạn, nhưng đôi khi có thể xảy ra trường hợp cùng một thuộc tính được sử dụng để xác định duy nhất thực thể trong các liên hệ công việc.
+
+27
+
+00: 04: 53, 790--> 00: 05: 05, 620
+
+Nhưng đó hoàn toàn là sự trùng hợp ngẫu nhiên. Vì vậy, trong ví dụ này, số An sinh xã hội của khách hàng đang được sử dụng để nhận dạng duy nhất khách hàng trong cả hai địa chỉ liên hệ công việc này.
+
+28
+
+00: 05: 06, 180--> 00: 05: 26, 420
+
+Hãy nhớ rằng, đó thực sự là sự trùng hợp ngẫu nhiên. Việc xác định các thực thể này của nhóm sẽ hoạt động độc lập với nhau và xác định các thuộc tính cũng như hoạt động cho các thực thể dựa trên yêu cầu trong từng bối cảnh nghiệp vụ, các thực thể được lưu trữ lâu dài.
+
+29
+
+00: 05: 26, 700--> 00: 05: 40, 000
+
+Dữ liệu được lưu trữ dài hạn thể hiện trạng thái hiện tại của thực thể. Điều này phổ biến đối với RDBMS và không có CSDL đơn lẻ nào được sử dụng để lưu trữ liên tục các thực thể.
+
+30
+
+00: 05: 40, 620--> 00: 05: 56, 450
+
+Trong trường hợp RDBMS, một bảng biểu thị một tập hợp các thực thể. Các quy tắc trong bảng biểu thị các thực thể được xác định duy nhất bằng cột khóa chính.
+
+31
+
+00: 05: 56, 700--> 00: 06: 06, 740
+
+Các cột còn lại có các giá trị cho thuộc tính của từng thực thể. Đã đến lúc xem lại nhanh những điểm chính của bài giảng này.
+
+32
+
+00: 06: 06, 840--> 00: 06: 14, 640
+
+Điều đầu tiên là các thực thể là các đối tượng kinh doanh chỉ có ý nghĩa trong một bối cảnh giới hạn.
+
+33
+
+00: 06: 14, 640--> 00: 06: 26, 760
+
+Nơi chúng được xác định là các thực thể được xác định duy nhất trong bối cảnh giới hạn . Tiếp theo là định nghĩa của thực thể bao gồm thuộc tính và hành vi.
+
+34
+
+00: 06: 27, 060--> 00: 06: 35, 700
+
+Hành vi này triển khai logic nghiệp vụ có thể thay đổi trạng thái của thực thể. Các thực thể được lưu trữ lâu dài.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Đối tượng thực thể (Entities Objects) là đối tượng miền có có định danh riêng duy nhất. Định danh này được giữ nguyên xuyên suốt trạng thái hoạt động của hệ thống phần mềm.
+
+Các thực thể là những đối tượng rất quan trọng của mô hình miền. Việc xác định xem một đối tượng có phải là thực thể hay không rất quan trọng.
+
+Trong trường hợp CSDL quan hệ, một bảng biểu thị một tập hợp các thực thể. Các quy tắc trong bảng biểu thị các thực thể được xác định duy nhất bằng cột khóa chính.
+
+Hành vi này triển khai logic nghiệp vụ có thể thay đổi trạng thái của thực thể. Các thực thể được lưu trữ lâu dài.
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+thực thể
+
+Trong Thiết kế hướng miền (thiết kế hướng miền), thực thể là khái niệm cốt lõi đại diện cho một đối tượng miền có nhận dạng duy nhất. Thực thể là một đối tượng được phân biệt với các đối tượng khác dựa trên nhận dạng duy nhất của nó, thay vì thuộc tính hoặc giá trị của nó.
+
+Các thực thể thường là các đối tượng quan trọng nhất trong mô hình miền và chúng thường có logic và hành vi nghiệp vụ phức tạp được liên kết với chúng. Họ cũng có thể có mối quan hệ với các thực thể, đối tượng giá trị hoặc dịch vụ miền khác.
+
+Một thực thể có các đặc điểm sau:
+
+Danh tính: Một thực thể có một danh tính duy nhất để phân biệt nó với các thực thể khác trong mô hình miền. Danh tính thường được biểu thị bằng ID hoặc khóa, chẳng hạn như ID khách hàng hoặc SKU sản phẩm.
+
+Khả năng thay đổi: Các thuộc tính của thực thể có thể thay đổi theo thời gian trong khi vẫn duy trì được danh tính của nó. Ví dụ: tên hoặc địa chỉ của khách hàng có thể thay đổi nhưng ID khách hàng vẫn giữ nguyên.
+
+Hành vi: Một thực thể có hành vi liên quan đến nó, thường là các quy tắc và logic nghiệp vụ phức tạp. Hành vi này thường được gói gọn trong chính thực thể đó.
+
+Mối quan hệ: Một thực thể có thể có mối quan hệ với các thực thể, đối tượng giá trị hoặc dịch vụ miền khác. Ví dụ: khách hàng có thể có lịch sử đặt hàng hoặc giỏ hàng.
+
+Các thực thể là một phần thiết yếu của mô hình miền và phải được thiết kế để thể hiện chính xác miền và các quy tắc kinh doanh của nó. Bằng cách lập mô hình chính xác các thực thể, nhà phát triển có thể tạo ra giải pháp phần mềm linh hoạt và dễ bảo trì hơn, đáp ứng nhu cầu của miền.
+
+Một ví dụ
+
+Hãy xem xét một nền tảng thương mại điện tử nơi khách hàng có thể đặt hàng sản phẩm. Trong mô hình miền này, Đơn hàng là một thực thể. Mỗi đơn hàng có một danh tính duy nhất và bất biến, chẳng hạn như số đơn hàng, giúp phân biệt nó với các đơn hàng khác trong hệ thống.
+
+Thực thể Đơn hàng có thể có một số thuộc tính, chẳng hạn như thông tin khách hàng, chi tiết thanh toán và thông tin giao hàng. Nó cũng có thể có mối quan hệ với các thực thể khác, chẳng hạn như thực thể Sản phẩm và Khách hàng.
+
+Hành vi của thực thể Đơn hàng bao gồm tạo và cập nhật đơn hàng, quản lý xử lý thanh toán và theo dõi trạng thái đơn hàng.
+
+Dưới đây là ví dụ về giao diện của thực thể Đơn hàng trong mã:
+
+public class Order {
+
+private OrderId orderId;
+
+private Customer customer;
+
+private List<Product> products;
+
+private Date orderDate;
+
+private PaymentDetails paymentDetails;
+
+private ShippingDetails shippingDetails;
+
+public Order(OrderId orderId, Customer customer) {
+
+this.orderId = orderId;
+
+this.customer = customer;
+
+this.products = Lists.newArrayList();
+
+this.orderDate = LocalDate.now();
+
+}
+
+public void addProduct(Product product) {
+
+products.add(product);
+
+}
+
+public void removeProduct(Product product) {
+
+products.remove(product);
+
+}
+
+public void processPayment() {
+
+// Process payment logic here...
+
+}
+
+public void shipOrder() {
+
+// Shipping logic here...
+
+}
+
+// Other behavior methods here...
+
+}
+
+Trong ví dụ này, thực thể Đơn hàng có một ID duy nhất (orderId) xác định nó trong hệ thống, cùng với các thuộc tính khác như customer, < /span>, gói gọn logic kinh doanh được liên kết với thực thể đơn hàng., và,, . Thực thể cũng có các phương thức hành vi, chẳng hạn như và, products, orderDatepaymentDetailsshippingDetailsaddProductremoveProductprocessPaymentshipOrder
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity : https:// thiết kế hướng miền - practitioners.com/entity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+Trang chủTrang chủBảng chú giảiNhận dạng thực thể
+
+Nhận dạng thực thể
+
+Danh tính của một thực thể phải là duy nhất và bất biến, nghĩa là nó không được thay đổi trong suốt vòng đời của thực thể đó. Việc thay đổi danh tính của một thực thể có thể gây ra hậu quả nghiêm trọng, chẳng hạn như gây ra sự không nhất quán về dữ liệu hoặc phá vỡ mối quan hệ với các thực thể hoặc đối tượng giá trị khác. Ví dụ: nếu ID của khách hàng bị thay đổi, điều đó có thể dẫn đến nhầm lẫn khi theo dõi lịch sử mua hàng của họ hoặc các tương tác khác với hệ thống.
+
+Điều quan trọng cần lưu ý là các thuộc tính của thực thể, chẳng hạn như tên hoặc địa chỉ, có thể thay đổi mà không ảnh hưởng đến danh tính của thực thể đó. Những thay đổi này phải được quản lý thông qua việc đóng gói thích hợp hành vi và logic kinh doanh của thực thể.
+
+Tóm lại, danh tính của một thực thể phải là duy nhất và bất biến, đồng thời những thay đổi đối với các thuộc tính của thực thể sẽ không ảnh hưởng đến danh tính của thực thể đó. Bằng cách tuân thủ nguyên tắc này, các nhà phát triển có thể tạo ra một mô hình miền nhất quán và dễ bảo trì hơn, thể hiện chính xác miền kinh doanh.
+
+Làm thế nào để chọn một danh tính thực thể tốt
+
+Chọn danh tính phù hợp cho một thực thể là một phần quan trọng trong việc thiết kế mô hình miền trong Thiết kế hướng miền (thiết kế hướng miền). Dưới đây là một số phương pháp hay để chọn danh tính của một thực thể:
+
+Chọn một danh tính duy nhất: Danh tính của một thực thể phải là duy nhất trong mô hình miền và nó không được thay đổi trong suốt vòng đời của thực thể. Danh tính của một thực thể phải được xác định theo yêu cầu kinh doanh, chẳng hạn như mã định danh duy nhất như số sê - ri, ID khách hàng hoặc số an sinh xã hội.
+
+Chọn danh tính ổn định: Danh tính của thực thể phải ổn định, nghĩa là danh tính không được thay đổi theo thời gian. Danh tính ổn định cho phép tính nhất quán và độ chính xác trong mô hình miền và nó có thể ngăn ngừa lỗi trong hệ thống. Ví dụ: nếu ID của khách hàng thay đổi, việc theo dõi lịch sử mua hàng của họ hoặc các tương tác khác với hệ thống có thể gây nhầm lẫn.
+
+Chọn danh tính dễ nhận dạng: Danh tính của thực thể phải dễ nhận dạng, tốt nhất là bởi người đọc. Ví dụ: việc sử dụng UUID hoặc GUID có thể không dễ nhận biết như tên hoặc số ID của khách hàng.
+
+Chọn một danh tính có thể được sử dụng nhất quán trong toàn bộ mô hình miền: Danh tính của một thực thể phải nhất quán trong toàn bộ mô hình miền và nó phải được sử dụng nhất quán trong mọi ngữ cảnh mà thực thể đó được tham chiếu.
+
+Xem xét khả năng mở rộng và hiệu suất: Việc chọn một danh tính có thể mở rộng quy mô và hoạt động tốt cũng rất quan trọng, đặc biệt đối với các hệ thống có khối lượng dữ liệu lớn hoặc thông lượng cao.
+
+Bằng cách làm theo những thực tiễn này, nhà phát triển có thể chọn danh tính phù hợp cho các thực thể thể hiện chính xác mô hình miền và cung cấp giải pháp phần mềm linh hoạt và có thể bảo trì.
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+% %! Entity Identity : https:// thiết kế hướng miền - practitioners.com/entity - identity
+
+
 
 \subsection{Đối tượng giá trị (Value Objects)}
 
 % Đối tượng miền hoặc đối tượng giá trị, là đối tượng đại diện cho một đặc điểm của miền mà không có nhận dạng riêng.
 
-% \input{contents/doi_tuong_gia_tri_value_objects}
+% Một đối tượng được dùng để mô tả các khía cạnh cố định của một miền và không có định danh.
+
+% Đối tượng giá trị không có danh tính duy nhất.
+
+% Đối tượng giá trị được tạo trong bộ nhớ tiến trình và sau đó bị hủy sau khi nó đã phục vụ mục đích của nó.
+
+% Một điểm khác biệt quan trọng giữa các thực thể và đối tượng giá trị là đối tượng giá trị không tồn tại lâu dài trong CSDL.
+
+% %! VD
+
+% %! chúng ta sẽ đặt logic xác thực cho địa chỉ email ở đâu?
+
+% %! xác nhận kỹ thuật không liên quan đến bất kỳ khái niệm kinh doanh nào.
+
+% %! tạo một đối tượng giá trị để xác thực địa chỉ email.
+
+% %! Kết quả là, thực thể khách hàng sẽ sạch hơn và đơn giản hơn nhiều trong việc thực hiện.
+
+% %! % Value Object -
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! [[Value Object]] An object that describes some characteristic or attribute but carries no concept of identity.
+
+Trang chủTrang chủBảng chú giảiĐối tượng giá trị
+
+Đối tượng giá trị
+
+Trong Thiết kế hướng miền (thiết kế hướng miền), đối tượng giá trị là một đối tượng đại diện cho một khái niệm hoặc ý tưởng trong mô hình miền không có danh tính duy nhất hoặc tuổi thọ vượt quá tuổi thọ của thực thể chứa đối tượng.
+
+Một đối tượng giá trị được xác định bởi các thuộc tính của nó và nó không thể thay đổi, nghĩa là trạng thái của nó không thể thay đổi sau khi được tạo. Các đối tượng giá trị thường được sử dụng để biểu thị số lượng, phép đo, ngày tháng, tiền tệ hoặc các khái niệm khác có thể được biểu thị dưới dạng kết hợp các thuộc tính.
+
+Vì các đối tượng giá trị không có danh tính duy nhất nên chúng có thể được sao chép và chia sẻ tự do mà không ảnh hưởng đến tính nhất quán của mô hình miền. Các đối tượng giá trị cũng được so sánh dựa trên thuộc tính của chúng chứ không phải danh tính của chúng, điều này cho phép so sánh linh hoạt và trực quan hơn.
+
+Trong triển khai phần mềm, các đối tượng giá trị thường được tạo dưới dạng các lớp bất biến, không có danh tính riêng và chúng thường được triển khai như một phần của thực thể hoặc tập hợp chứa. Bằng cách sử dụng các đối tượng giá trị trong mô hình miền, nhà phát triển có thể tạo mã có tính biểu cảm hơn, dễ bảo trì và mở rộng hơn để phản ánh tốt hơn miền kinh doanh.
+
+Một ví dụ
+
+Giả sử chúng ta đang xây dựng một trang web thương mại điện tử và chúng ta có yêu cầu thể hiện giá trong mô hình miền. Giá là một ứng cử viên phù hợp cho đối tượng giá trị vì nó có thể được biểu diễn dưới dạng kết hợp các thuộc tính (ví dụ: tiền tệ và số lượng) và không có đặc điểm nhận dạng duy nhất của riêng nó.
+
+Đây là một ví dụ cực kỳ đơn giản về đối tượng Giá trị giá trong Java:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+số 8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+class Price {
+
+private final Currency currency;
+
+private final BigDecimal amount;
+
+public Price(Currency currency, BigDecimal amount) {
+
+this.currency = currency;
+
+this.amount = amount;
+
+}
+
+public Currency getCurrency() {
+
+return currency;
+
+}
+
+public BigDecimal getAmount() {
+
+return amount;
+
+}
+
+// Other methods and business logic specific to the Price concept
+
+}
+
+Trong ví dụ này, đối tượng giá trị Price có hai thuộc tính: currency và amount. Thuộc tính currency đại diện cho đơn vị tiền tệ của giá (ví dụ: USD, EUR, v.v.), trong khi thuộc tính amount đại diện cho giá trị bằng số của giá. Đối tượng Price là bất biến và trạng thái của nó không thể thay đổi sau khi được tạo. Đối tượng Price cũng xác định các phương thức để truy xuất các thuộc tính của nó (ví dụ: getCurrency() và getAmount()), cũng như các phương thức khác dành riêng cho < khái niệm /span>). hoặc Price (ví dụ: phương thức add()subtract()
+
+Bằng cách sử dụng đối tượng giá trị Price, chúng tôi có thể đảm bảo rằng giá được thể hiện nhất quán trong toàn bộ mô hình miền và chúng tôi có thể thực hiện các so sánh và tính toán linh hoạt và trực quan hơn về giá.
+
+Đối tượng giá trị so với thực thể
+
+Đối tượng giá trị trong một giải pháp có thể trở thành một thực thể trong giải pháp khác. Sự khác biệt giữa các đối tượng giá trị và các thực thể phụ thuộc vào ngữ cảnh và dựa trên nhu cầu của mô hình miền.
+
+Trong một ngữ cảnh, một đối tượng có thể được coi là một đối tượng giá trị vì nó được xác định bởi các thuộc tính của nó và không có một danh tính duy nhất. Tuy nhiên, trong một bối cảnh khác hoặc một giải pháp khác, cùng một đối tượng có thể được coi là một thực thể vì nó có một danh tính duy nhất và có thể được lưu giữ trong CSDL hoặc có tuổi thọ vượt quá đối tượng chứa.
+
+Ví dụ: hãy xem xét một đối tượng Person trong miền nhân sự. Trong một ngữ cảnh, đối tượng Person có thể được coi là một đối tượng giá trị vì nó được xác định bởi các thuộc tính của nó, chẳng hạn như tên, ngày sinh và số an sinh xã hội. Tuy nhiên, trong một ngữ cảnh khác hoặc một giải pháp khác, đối tượng Person có thể được coi là một thực thể vì nó có một danh tính duy nhất và có thể được duy trì trong CSDL hoặc được sử dụng trên các ngữ cảnh giới hạn khác nhau.
+
+Cuối cùng, việc lựa chọn mô hình hóa một đối tượng là đối tượng giá trị hay thực thể phụ thuộc vào nhu cầu của mô hình miền và các yêu cầu cụ thể của giải pháp phần mềm đang được phát triển. Điều quan trọng là chọn các khái niệm mô hình phù hợp để thể hiện chính xác miền và cung cấp giải pháp phần mềm linh hoạt và có thể bảo trì.
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+% %! Value Object : https:// thiết kế hướng miền - practitioners.com/home/glossary/value - object
+
+
 
 \subsection{Miền dịch vụ (Service Domain)}
 
-% \input{contents/mien_dich_vu_srv}
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! [[Service]] An operation offered as an interface that stands alone in the model, with no encapsulated state.
+
+Chuyển đến nội dung
+
+Đối với người hành nghề bởi người hành nghề
+
+Tìm kiếm
+
+Thiết kế hướng miền: Hướng dẫn dành cho người thực hành
+
+Câu hỏi thường gặp
+
+Bảng chú giải
+
+Về chúng tôi
+
+Cuốn sách của chúng tôi!
+
+Trang chủTrang chủBảng chú giảiDịch vụ
+
+Dịch vụ
+
+Trong thiết kế hướng miền, dịch vụ là một phần của lớp miền triển khai logic miền hoặc trường hợp sử dụng không phù hợp một cách tự nhiên với một thực thể hoặc đối tượng giá trị cụ thể. Nó thường điều phối các tương tác giữa nhiều thực thể hoặc tập hợp. Một dịch vụ đại diện cho một hoạt động gắn kết và không trạng thái có đầu vào và đầu ra. Nó không có trạng thái bền vững và không cần phải khởi tạo. Các dịch vụ thường có tên phản ánh mục đích miền của chúng, chẳng hạn như `OrderProcessingService` hoặc `PaymentService`.
+
+Có một số trường hợp nhất định mà việc sử dụng dịch vụ có thể không phù hợp.
+
+Thứ nhất, nếu logic nghiệp vụ có thể được liên kết với một thực thể hoặc đối tượng giá trị, có thể tốt hơn nếu gói gọn logic trong thực thể hoặc đối tượng giá trị đó. Điều này có thể giúp cải thiện tính gắn kết của mã và làm cho mã dễ hiểu hơn.
+
+Thứ hai, nếu logic nghiệp vụ liên quan đến nhiều thực thể hoặc tập hợp được liên kết chặt chẽ với nhau thì tốt hơn là chúng ta nên đánh giá lại thiết kế của bản thân các uẩn. Trong những trường hợp như vậy, có thể phù hợp hơn nếu phân chia các tập hợp hoặc xác định lại ranh giới của chúng để giảm sự ghép nối và cải thiện khả năng bảo trì.
+
+Cuối cùng, nếu logic nghiệp vụ liên quan đến các hệ thống hoặc cơ sở hạ tầng bên ngoài thì tốt hơn nên sử dụng lớp chống đổ vỡ hoặc mẫu bộ chuyển đổi để tách biệt mô hình miền khỏi các phụ thuộc bên ngoài. Điều này có thể giúp giảm khả năng ghép nối và cải thiện tính linh hoạt của hệ thống.
+
+Ví dụ
+
+Dưới đây là ví dụ về một dịch vụ trong Java có liên quan đến nhiều hơn một tổng hợp:
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+số 8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+public class OrderService {
+
+private final OrderRepository orderRepository;
+
+private final ProductRepository productRepository;
+
+public void createOrder(Order order) {
+
+for (OrderItem item: order.getItems()) {
+
+Product product = productRepository.findById(item.getProductId());
+
+product.reduceStockBy(item.getQuantity());
+
+productRepository.save(product);
+
+}
+
+orderRepository.save(order);
+
+}
+
+// Other methods...
+
+}
+
+Trong ví dụ này, OrderService chịu trách nhiệm tạo đơn đặt hàng và nó tương tác với hai tập hợp: Order và Product. Tổng hợp Order đại diện cho đơn đặt hàng do khách hàng đặt, trong khi tổng hợp Product đại diện cho một sản phẩm có thể được đặt hàng.
+
+Phương thức createOrder cập nhật kho của từng sản phẩm trong đơn hàng bằng cách gọi phương thức save trên ProductRepository, và sau đó tự lưu đơn hàng bằng cách gọi phương thức save trên OrderRepository.
+
+Thể loại
+
+Phân tích
+
+điều cơ bản
+
+thiết kế hướng miền
+
+thiết kế
+
+câu hỏi thường gặp
+
+Khả năng lãnh đạo
+
+hoa văn
+
+Blog tại WordPress.com.
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+% %! Service : https:// thiết kế hướng miền - practitioners.com/ dịch vụ
+
+
 
 %! Hướng dẫn 7/4
 
@@ -1052,7 +1704,6 @@ Trong bản đồ bối cảnh, ngôn ngữ được xuất bản kết hợp d�
 
 % \subsubsection{xxxxxxx}
 
-% \input{contents/_a.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1074,9 +1725,7 @@ Trong bản đồ bối cảnh, ngôn ngữ được xuất bản kết hợp d�
 
 % \subsubsection{xxxxxxx}
 
-% % \input{contents/_a.tex}
 
-% \end{document} % kết thúc
 
 % Yêu cầu nghiệp vụ của từng sub
 
@@ -1089,16 +1738,4 @@ Trong bản đồ bối cảnh, ngôn ngữ được xuất bản kết hợp d�
 % sub trước model
 
 % %
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{document}
-
-\section{xxxxxxx}
-
-\subsection{xxxxxxx}
-
-\subsubsection{xxxxxxx}
-
-\input{contents/_a.tex}
-
+ 
