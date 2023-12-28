@@ -110,6 +110,10 @@ Trong thiết kế hướng miền, có ba loại miền phụ là:
     
     \item Miền phụ chung (Generic Subdomain)
     
+
+Miền phụ chung cung cấp các giải pháp có sẵn mà doanh nghiệp có thể mua. Miền phụ chung có thể được tìm thấy trên nhiều ngành. Doanh nghiệp không thể đạt được bất kỳ lợi thế cạnh tranh   so với đối thủ bằng cách thực hiện những điều khác biệt trong miền phụ chung.
+
+\begin{example} Các miền phụ chung \emph{"quản lý nhân sự"} hay \emph{"quản lý cơ sở vật chất"} không tạo thêm bất kỳ giá trị khác biệt nào cho doanh nghiệp.          \end{example}
     \item Miền phụ cốt lõi (Core Subdomain)
     
     \item Miền phụ hỗ trợ (Supporting Subdomain)
@@ -117,19 +121,12 @@ Trong thiết kế hướng miền, có ba loại miền phụ là:
 \end{itemize}
 
 \end{document} % Kết thúc
-% \subsubsection{Miền phụ chung (Generic Subdomain)}
-
-% Miền phụ chung cung cấp các giải pháp có sẵn mà doanh nghiệp có thể mua. Miền phụ chung có thể được tìm thấy trên nhiều ngành. Doanh nghiệp không thể đạt được bất kỳ lợi thế cạnh tranh nào so với đối thủ bằng cách thực hiện những điều khác biệt trong miền phụ chung.
-
-% \begin{example} Các miền phụ chung \textit{"quản lý nhân sự"} hay \textit{"quản lý cơ sở vật chất"} không tạo thêm bất kỳ giá trị khác biệt nào cho doanh nghiệp.
-
-% \end{example}
 
 % % \subsubsection{Miền phụ cốt lõi (Core Subdomain)}
 
 % Miền phụ cốt lõi là phần quan trọng và có giá trị nhất của hệ thống. Miền phụ cốt lõi giúp phân biệt các doanh nghiệp và làm cho các doanh nghiệp có giá trị. Miền phụ cốt lõi tập trung vào mục tiêu và yêu cầu của khách hàng với doanh nghiệp, từ đó quyết định sự thành công của doanh nghiệp. Vì vậy, mỗi doanh nghiệp luôn tìm cách thực hiện những điều khác biệt trong các miền phụ cốt lõi này để đạt được lợi thế so với đối thủ cạnh tranh.
 
-% \begin{example} Trong miền thẻ tín dụng, miền phụ cốt lõi có thể là \textit{"phát hành thẻ"} chịu trách nhiệm về quá trình phát hành thẻ tín dụng cho khách hàng. Miền phụ cốt lõi này bao gồm các nhiệm vụ như: thu thập thông tin khách hàng, thực hiện kiểm tra tín dụng, kích hoạt thẻ, \dots
+% \begin{example} Trong miền thẻ tín dụng, miền phụ cốt lõi có thể là \emph{"phát hành thẻ"} chịu trách nhiệm về quá trình phát hành thẻ tín dụng cho khách hàng. Miền phụ cốt lõi này bao gồm các nhiệm vụ như: thu thập thông tin khách hàng, thực hiện kiểm tra tín dụng, kích hoạt thẻ, \dots
 
 % \end{example}
 
@@ -137,7 +134,7 @@ Trong thiết kế hướng miền, có ba loại miền phụ là:
 
 % Các miền phụ cốt lõi phụ thuộc vào các miền phụ hỗ trợ. Miền phụ hỗ trợ cung cấp các dịch vụ để miền phụ cốt lõi hoạt động hiệu quả. Tuy nhiên, miền phụ hỗ trợ không đòi hỏi mức độ phức tạp cao về logic nghiệp vụ.
 
-% \begin{example} Trong nhiều phần mềm, miền phụ hỗ trợ \textit{"xác thực người dùng"} OAuth 2.0 của Facebook hoặc Google hỗ trợ cho miền phụ cốt lõi hoạt động hiệu quả.
+% \begin{example} Trong nhiều phần mềm, miền phụ hỗ trợ \emph{"xác thực người dùng"} OAuth 2.0 của Facebook hoặc Google hỗ trợ cho miền phụ cốt lõi hoạt động hiệu quả.
 
 % \end{example}
 
@@ -559,7 +556,7 @@ Mô hình riêng biệt (Separate Ways) khi các bối cảnh bị giới hạn 
 
 Trong thực tế, nhiều bối cảnh bị giới hạn phụ thuộc lẫn nhau. Mô hình hợp tác (Partnership) tạo điều kiện cho việc giao tiếp và cộng tác giữa các bối cảnh bị giới hạn phụ thuộc. Tuy nhiên, sự phụ thuộc này dẫn đến mức độ kết hợp cao giữa các nhóm và bối cảnh bị giới hạn, dẫn tới mất đi tính độc lập.
 
-\textit{Lưu ý: Mô hình hợp tác không phải là mô hình của các mẫu chiến lược trong thiết kế huớng miền.}
+\emph{Lưu ý: Mô hình hợp tác không phải là mô hình của các mẫu chiến lược trong thiết kế huớng miền.}
 
 Để giải quyết vấn đề bối cảnh bị giới hạn phụ thuộc lẫn nhau chúng ta có mô hình hạt nhân chung. Mô hình hạt nhân chung (Shared Kernel) cho phép các bối cảnh bị giới hạn có phần chia sẻ chung và có ranh giới phân định rõ ràng. Từ đó, tách việc quản lí các mô hình hạt nhân chung này một cách độc lập với phần còn lại của bối cảnh bị giới hạn . Khi cần thay đổi mà không phải của mô hình hạt nhân chung thì nhóm sẽ hoạt động độc lập. Thông thường, mô hình hạt nhân chung được hiện thực hóa bằng các thư viện chung. Tuy nhiên, chỉ sử dụng mô hình hạt nhân chung nếu quan hệ của các bối cảnh bị giới hạn nhỏ và ổn định để tránh quan hệ phức tạp và ràng buộc chặt chẽ.
 
