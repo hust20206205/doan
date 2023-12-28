@@ -18,4 +18,5 @@
 Hãy giúp tôi sửa lỗi chính tả và ngữ pháp và mạch lạc:
 Tóm tắt nội dung theo 10 gạch đầu dòng:
 <!--@ ChatGPT --> 
+
 ![Alt text](image.png)
