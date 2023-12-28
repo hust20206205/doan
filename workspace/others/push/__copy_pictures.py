@@ -21,7 +21,7 @@ while "  " in input:
 print(input)
 output = Convert.VarSnakeCase(input)
 # sao chép  
-
-nguon = r"../pictures/_"
-dich = os.path.join("../pictures", output)
+pictures="../../../baocao/pictures"
+nguon =   os.path.join(pictures, "_")
+dich = os.path.join(pictures, output)
 shutil.copytree(nguon, dich)
