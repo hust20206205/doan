@@ -1,62 +1,62 @@
 \section{Đôi nét  về thiết kế hướng miền (Domain Driven Design)}
 
-Thiết kế hướng miền được Eric Evans giới thiệu trong cuốn sách \emph{"Domain Driven Design: Tackling Complexity in the Heart of Software"}. \emph{Thiết kế hướng miền (Domain Driven Design)} là một hướng tiếp cận thiết kế phần mềm tập trung vào việc hiểu rõ và mô hình hóa lĩnh vực kinh doanh của một tổ chức. Thiết kế hướng miền nhấn mạnh việc sử dụng lĩnh vực nghiệp vụ kinh doanh để thảo luận và đề xuất giải pháp đáp ứng nhu cầu.
+% Thiết kế hướng miền được Eric Evans giới thiệu trong cuốn sách \emph{"Domain Driven Design: Tackling Complexity in the Heart of Software"}. \emph{Thiết kế hướng miền (Domain Driven Design)} là một hướng tiếp cận thiết kế phần mềm tập trung vào việc hiểu rõ và mô hình hóa lĩnh vực kinh doanh của một tổ chức. Thiết kế hướng miền nhấn mạnh việc sử dụng lĩnh vực nghiệp vụ kinh doanh để thảo luận và đề xuất giải pháp đáp ứng nhu cầu.
 
 
 
-Với nhiều phần mềm được thiết kế không tốt, phần xử lý các công việc không liên quan đến vấn đề nghiệp vụ kinh doanh như truy cập tập tin, hạ tầng mạng, cơ sở dữ liệu, \dots được lập trình trong đối tượng nghiệp vụ kinh doanh. Cách này có ưu điểm  giúp tốc độ hoàn thiện  phần mềm nhanh. Tuy nhiên, cách này làm dự án bị mất đi tính hướng đối tượng khó        thay đổi, mở rộng hệ thống, \dots Thiết kế hướng miền cung cấp một cách để tổ chức mã nguồn và dễ dàng thích ứng với các yêu cầu thay đổi.
+% Với nhiều phần mềm được thiết kế không tốt, phần xử lý các công việc không liên quan đến vấn đề nghiệp vụ kinh doanh như truy cập tập tin, hạ tầng mạng, cơ sở dữ liệu, \dots được lập trình trong đối tượng nghiệp vụ kinh doanh. Cách này có ưu điểm  giúp tốc độ hoàn thiện  phần mềm nhanh. Tuy nhiên, cách này làm dự án bị mất đi tính hướng đối tượng khó        thay đổi, mở rộng hệ thống, \dots Thiết kế hướng miền cung cấp một cách để tổ chức mã nguồn và dễ dàng thích ứng với các yêu cầu thay đổi.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Định nghĩa về miền (Domain    )}
 
-Hệ thống phần mềm được tạo ra để xử lý công việc trong cuộc sống hiện đại. Việc phát triển hệ thống liên kết chặt chẽ với một số khía cạnh cụ thể trong cuộc sống của chúng ta. Trong thiết kế hướng miền, \emph{miền (Domain)} đề cập đến phạm vi kiến thức và vấn đề cụ thể mà hệ thống xử lý.
+% Hệ thống phần mềm được tạo ra để xử lý công việc trong cuộc sống hiện đại. Việc phát triển hệ thống liên kết chặt chẽ với một số khía cạnh cụ thể trong cuộc sống của chúng ta. Trong thiết kế hướng miền, \emph{miền (Domain)} đề cập đến phạm vi kiến thức và vấn đề cụ thể mà hệ thống xử lý.
 
-\begin{itemize}
+% \begin{itemize}
 
-    \item Về góc độ kinh doanh: Miền đại diện cho một lĩnh vực hoặc ngành mà doanh nghiệp hoạt động.
+%     \item Về góc độ kinh doanh: Miền đại diện cho một lĩnh vực hoặc ngành mà doanh nghiệp hoạt động.
 
-    \item Về góc độ hệ thống: Miền có thể coi là đại diện cho không gian vấn đề của hệ thống.
+%     \item Về góc độ hệ thống: Miền có thể coi là đại diện cho không gian vấn đề của hệ thống.
 
-\end{itemize}
+% \end{itemize}
 
-\begin{MyExample} Trong đồ án này, miền được xác định là bài toán giải pháp hóa đơn điện tử.     \end{MyExample}
+% \begin{MyExample} Trong đồ án này, miền được xác định là bài toán giải pháp hóa đơn điện tử.     \end{MyExample}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Chuyên gia  miền    (Domain Expert)}
 
-Trong thiết kế hướng miền, \emph{chuyên gia  miền    (Domain Expert)} là người có kiến thức và hiểu biết sâu sắc về vấn đề đang được hệ thống phần mềm giải quyết. Chuyên gia  miền    thể hiện chính xác vấn đề kinh doanh, đóng vai trò là nguồn thông tin cho nhóm phát triển.         Trong kiến trúc vi dịch vụ, thiết kế hướng miền đảm bảo mỗi dịch vụ được thiết kế phản ánh một phần cụ thể của lĩnh vực kinh doanh. Mỗi dịch vụ được quản lí bởi một nhóm phát triển được hỗ trợ bởi các chuyên gia  miền. 
+% Trong thiết kế hướng miền, \emph{chuyên gia  miền    (Domain Expert)} là người có kiến thức và hiểu biết sâu sắc về vấn đề đang được hệ thống phần mềm giải quyết. Chuyên gia  miền    thể hiện chính xác vấn đề kinh doanh, đóng vai trò là nguồn thông tin cho nhóm phát triển.         Trong kiến trúc vi dịch vụ, thiết kế hướng miền đảm bảo mỗi dịch vụ được thiết kế phản ánh một phần cụ thể của lĩnh vực kinh doanh. Mỗi dịch vụ được quản lí bởi một nhóm phát triển được hỗ trợ bởi các chuyên gia  miền. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cốt lõi của thiết kế hướng miền}
 
 
-Thiết kế hướng miền cung cấp 2 loại mẫu:
+% Thiết kế hướng miền cung cấp 2 loại mẫu:
 
-\begin{itemize}
+% \begin{itemize}
 
-    \item \emph{Các mẫu chiến lược (Strategic Patterns):} Phân chia một miền lớn và phức tạp thành các phần nhỏ hơn với ranh giới được xác định rõ ràng. Giúp phân chia một miền lớn hợp lý.
+%     \item \emph{Các mẫu chiến lược (Strategic Patterns):} Phân chia một miền lớn và phức tạp thành các phần nhỏ hơn với ranh giới được xác định rõ ràng. Giúp phân chia một miền lớn hợp lý.
 
-    \item \emph{Các mẫu kỹ thuật (Tactical Patterns):} Hiện thực hóa các khái niệm và qui trình trong thành phần thành các thiết kế hệ thống phần mềm. Giúp hệ thống phù hợp với kinh doanh.
+%     \item \emph{Các mẫu kỹ thuật (Tactical Patterns):} Hiện thực hóa các khái niệm và qui trình trong thành phần thành các thiết kế hệ thống phần mềm. Giúp hệ thống phù hợp với kinh doanh.
 
-\end{itemize}
+% \end{itemize}
 
-\begin{figure}[H]
+% \begin{figure}[H]
 
-    \centering
+%     \centering
 
-    \includegraphics[scale = 0.5]{pictures/_tong_quan_ve_cot_loi_cua_thiet_ke_huong_mien/main.drawio.png}
+%     \includegraphics[scale = 0.5]{pictures/_tong_quan_ve_cot_loi_cua_thiet_ke_huong_mien/main.drawio.png}
 
-    \caption{Tổng quan về  cốt lõi của thiết kế hướng miền    }
+%     \caption{Tổng quan về  cốt lõi của thiết kế hướng miền    }
 
-\end{figure}
-\end{document} % Kết thúc
+% \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% \subsection{Chi tiết về các mẫu chiến lược và các mẫu kỹ thuật}
+\subsection{Chi tiết về các mẫu chiến lược và các mẫu kỹ thuật}
 
 \section{Các mẫu chiến lược của thiết kế hướng miền}
 
-% \chapter{Các mẫu chiến lược}
+\chapter{Các mẫu chiến lược}
+\end{document} % Kết thúc
 
 Các mẫu chiến lược phân tích nghiệp vụ kinh doanh sau đó đưa ra việc phân chia các thành phần và hiểu mối quan hệ của các thành phần đó. Từ đó, các mẫu chiến lược giúp xác định các thành phần quan trọng của hệ thống, đảm bảo kiến trúc phần mềm phản ánh đúng các yêu cầu kinh doanh. Từ việc phân chia hệ thống thành các thành phần nhỏ, chúng ta có thể tạo ra hệ thống mở rộng dễ dàng, phát triển linh hoạt theo nhu cầu kinh doanh.
 
